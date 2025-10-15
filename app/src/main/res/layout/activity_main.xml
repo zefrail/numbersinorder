@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background"
+    android:gravity="center">
+
+    <!-- Progress: stars -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/no_star" />
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/no_star" />
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/no_star" />
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/no_star" />
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/no_star" />
+    </LinearLayout>
+
+    <!-- Buttons with numbers -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:background="@drawable/button_background"
+            android:layout_margin="8dp" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:background="@drawable/button_background"
+            android:layout_margin="8dp" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:background="@drawable/button_background"
+            android:layout_margin="8dp" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:background="@drawable/button_background"
+            android:layout_margin="8dp" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:background="@drawable/button_background"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+    <!-- TextViews with "?" or numbers -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/question_mark"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_margin="8dp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/question_mark"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_margin="8dp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/question_mark"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_margin="8dp" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/question_mark"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_margin="8dp" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/question_mark"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+    <!-- TextView to display attempts -->
+    <TextView
+        android:id="@+id/attemptsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_attempts"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

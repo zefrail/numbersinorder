@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Working mode"
+        android:textSize="44sp"
+        android:fontFamily="@font/kidsplay"
+        android:padding="10dp"
+        android:background="#CFD593"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/modeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+        <RadioButton
+            android:id="@+id/unlimitedModeRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/borderwall"
+            android:text="No limit"
+            android:textSize="30sp" />
+        <RadioButton
+            android:id="@+id/limitedModeRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/borderwall"
+            android:text="With limit"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/attemptsInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Number of attempts"
+        android:inputType="number"
+        android:textSize="25sp"
+        android:padding="7dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kidsplay"
+        android:text="Start play"
+        android:textSize="40sp"
+        android:background="@drawable/button_background" />
+
+</LinearLayout>

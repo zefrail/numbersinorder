@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Название приложения -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set numbers\nin order!"
+        android:textSize="46sp"
+        android:textColor="#F44336"
+        android:fontFamily="@font/kidsplay"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"/>
+
+    <!-- TextView с анимацией увеличения ширины и смены цвета -->
+    <TextView
+        android:id="@+id/animatedTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textSize="24sp"
+        android:textColor="#FFFFEB3B"
+        android:gravity="center"
+        android:background="@drawable/animated_text_background"
+        android:padding="8dp" />
+
+</LinearLayout>
