@@ -14,7 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-// Стартовая активность, отображаемая 6 секунд с анимацией названия и TextView
+// Start activity, displayed for 6 seconds with title and TextView animation
 public class Start extends AppCompatActivity {
 
     private TextView titleTextView;
@@ -26,54 +26,54 @@ public class Start extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        // Инициализация UI-элементов
+        // Initializing UI elements
         titleTextView = findViewById(R.id.titleTextView);
         titleTextView.setAlpha(0);
         animatedTextView = findViewById(R.id.animatedTextView);
 
         titleTextView.animate().alpha(1f).setDuration(5000).start();
 
-        // Получение ширины экрана для анимации TextView
+        // Getting screen width for TextView animation
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
-        int targetWidth = (int) (screenWidth * 0.8); // 80% ширины экрана
+        int targetWidth = (int) (screenWidth * 0.8); // 80% of screen width
 
-        // Анимация увеличения ширины TextView за 5 секунд
+        // Animation for increasing TextView width over 5 seconds
         ObjectAnimator widthAnimator = ObjectAnimator.ofInt(animatedTextView, "width", 0, targetWidth);
-        widthAnimator.setDuration(5000); // 5 секунд
+        widthAnimator.setDuration(5000); // 5 seconds
         widthAnimator.addUpdateListener(animation -> {
             int newWidth = (int) animation.getAnimatedValue();
             animatedTextView.getLayoutParams().width = newWidth;
             animatedTextView.requestLayout();
         });
 
-        // Анимация смены цвета текста TextView (от жёлтого к зелёному)
+        // Animation for changing TextView text color (from yellow to green)
         ObjectAnimator colorAnimator = ObjectAnimator.ofObject(
                 animatedTextView,
                 "textColor",
                 new ArgbEvaluator(),
-                0xFFFFEB3B, // Жёлтый
-                0xFF4CAF50  // Зелёный
+                0xFFFFEB3B, // Yellow
+                0xFF4CAF50  // Green
         );
-        colorAnimator.setDuration(5000); // 5 секунд
+        colorAnimator.setDuration(5000); // 5 seconds
 
-        // Запуск анимаций
+        // Starting animations
         widthAnimator.start();
         colorAnimator.start();
 
-        // Переход к SettingsActivity через 6 секунд
+        // Transition to SettingsActivity after 7 seconds
         handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(() -> {
             startActivity(new Intent(Start.this, SettingsActivity.class));
-            finish(); // Закрываем SplashActivity
-        }, 7000); // 7 секунд
+            finish(); // Closing SplashActivity
+        }, 7000); // 7 seconds
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // Очистка Handler для предотвращения утечек памяти
+        // Clearing the Handler to prevent memory leaks
         if (handler != null) {
             handler.removeCallbacksAndMessages(null);
         }
